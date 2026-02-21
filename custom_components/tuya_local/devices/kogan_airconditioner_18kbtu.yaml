@@ -1,0 +1,35 @@
+name: Air conditioner
+products:
+  - id: 90fcd6f1c616ff6cfa96dea55c45d8fc
+    manufacturer: Kogan
+    model: 18000 BTU air conditioner
+entities:
+  - entity: climate
+    dps:
+      - id: 1
+        type: boolean
+        name: hvac_mode
+        mapping:
+          - dps_val: false
+            value: "off"
+          - dps_val: true
+            value: cool
+      - id: 2
+        type: integer
+        name: temperature
+        range:
+          min: 16
+          max: 30
+      - id: 3
+        type: integer
+        name: current_temperature
+      - id: 5
+        type: string
+        name: fan_mode
+        mapping:
+          - dps_val: "1"
+            value: low
+          - dps_val: "2"
+            value: medium
+          - dps_val: "3"
+            value: high
